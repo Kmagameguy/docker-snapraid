@@ -3,8 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - "*"
+      - master
   pull_request:
+    branches:
+      - master
 
 jobs:
   build:
@@ -23,10 +25,3 @@ jobs:
         run: |
           ls -la build/
           ls -la
-
-      - name: Store archives
-        uses: actions/upload-artifact@v2
-        with:
-          name: snapraid-deb.zip
-          path: build/*.deb
-          if-no-files-found: error

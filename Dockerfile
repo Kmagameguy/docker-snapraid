@@ -1,5 +1,4 @@
 FROM debian
-MAINTAINER Alex Kretzschmar <alexktz@gmail.com>
 
 ARG SNAPRAID_VERSION
 
