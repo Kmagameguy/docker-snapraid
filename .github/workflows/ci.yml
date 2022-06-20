@@ -34,7 +34,7 @@ jobs:
           ls -la
 
       - name: Upload (Latest) Artifact
-        uses: actiona/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: snapraid-deb.zip
           path: build/*.deb
