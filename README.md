@@ -20,4 +20,6 @@ The build script spins up a container, executes the `Dockerfile` which performs 
 
 To save building it yourself, you can also download the `.deb` file as an artifact from GitHub actions.
 
+*Originally forked from https://github.com/ironicbadger/docker-snapraid*
+
 [docker]:https://docs.docker.com/engine/install/
