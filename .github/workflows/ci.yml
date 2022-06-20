@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -14,14 +14,28 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build deb
+      - name: Build (latest) deb
         run: |
           mkdir build
           bash build.sh
           ls -la build/
           ls -la
-        
+
+      - name: Build (legacy) deb
+        run: |
+          mkdir legacy_build
+          bash build.sh 11.5
+          ls -la legacy_build/
+          ls -la
+
       - name: debug
         run: |
           ls -la build/
           ls -la
+
+      - name: Upload (Latest) Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: snapraid-deb.zip
+          path: build/*.deb
+          if-no-files-found: error
