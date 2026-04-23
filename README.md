@@ -2,6 +2,10 @@
 
 [![CI](https://github.com/Kmagameguy/docker-snapraid/actions/workflows/ci.yml/badge.svg)](https://github.com/Kmagameguy/docker-snapraid/actions/workflows/ci.yml)
 
+## ⚠️ THIS PROJECT IS DEPRECATED ⚠️
+2026-04-23: Snapraid Github releases now look like they are providing .rpm and .deb binaries, so you should probably get them direct from the source.
+
+## Overview
 This container will allow you to build a Snapraid `.deb` file without installing any build dependencies on your system.
 
 ### Pre-Requisites
